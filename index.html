@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEWSPARK</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <script src="./JavaScript/flickity.js"></script>
+  <script src="./JavaScript/script.js"></script>
+  <script src="./API-client/newsAPI.js" defer></script> 
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/navigation.css">
+  <link rel="stylesheet" href="./css/flickity.css">
+
+
+
+</head>
+
+<body onload="coverIMG()">
+  <div class="scroll-indicator">
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+  </div>
+
+  <div class="head">
+    <div style="display: inline-flex;  margin: 0 10%; ">
+      <div class="trending">
+        <h3>trending</h3>
+      </div>
+      <div class="extend">
+        <span id="today"> </span> ||
+        <a class="icn" href="#"><i class="fab fa-twitter "></i></a>
+        <a class="icn" href="#"><i class="fab fa-facebook "></i></a>
+        <a class="icn" href="#"><i class="fab fa-youtube "></i></a>
+        <a class="icn" href="#"><i class="fab fa-instagram "></i></a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <header>
+
+    <div class="brand">
+      <span>Newspark</span>
+      <span id="ad"> <a href="#"> <img src="banner1.jpg"></a></span>
+
+
+    </div>
+
+    <nav>
+      <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">Pages</a>
+        <a href="#contact">Contact</a>
+        <div class="dropdown">
+          <button class="dropbtn">Region
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">World</a>
+            <a href="#">State</a>
+            <a href="#">District</a>
+          </div>
+        </div>
+        <a href="#about">Archive</a>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="dropNav()">&#9776;</a>
+      </div>
+
+
+
+      <span class="weather">
+        <img src="./icons/temp.png" alt="weather" height="30px">
+        <div>
+          <div>25°C</div>
+          <div>Asansol</div>
+        </div>
+      </span>
+
+    </nav>
+
+    <br>
+
+    <section class="header">
+      <div class="cover_image">
+
+
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="./image/img_woods_wide.jpg" style="height: 45ch; width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="./image/img_5terre.jpg" style="height: 45ch; width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="./image/img_mountains.jpg" style="height: 45ch; width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="./image/img_lights.jpg" style="height: 45ch; width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="./image/img_nature.jpg" style="height: 45ch; width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="./image/img_snow.jpg" style="height: 45ch; width:100%">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Image text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="./image/img_woods_wide.jpg" style="height:10ch; width:100%"
+              onclick="currentSlide(1)" alt="The Woods">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./image/img_5terre.jpg" style="height:10ch; width:100%"
+              onclick="currentSlide(2)" alt="Cinque Terre">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./image/img_mountains.jpg" style="height:10ch; width:100%"
+              onclick="currentSlide(3)" alt="Mountains and fjords">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./image/img_lights.jpg" style="height:10ch; width:100%"
+              onclick="currentSlide(4)" alt="Northern Lights">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./image/img_nature.jpg" style="height:10ch; width:100%"
+              onclick="currentSlide(5)" alt="Nature and sunrise">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./image/img_snow.jpg" style="height:10ch; width:100%"
+              onclick="currentSlide(6)" alt="Snowy Mountains">
+          </div>
+        </div>
+        <br>
+      </div>
+      <div class="headlines">
+
+        <div class="news1">
+          <a href="#">
+            <img src="images/img6.jpg" alt="img">
+            <div>
+              <br>
+              <h4>Technology / march 26, 2020</h4>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
+                tempora!</p>
+            </div>
+          </a>
+        </div>
+        <div class="news2">
+          <a href="#">
+            <img src="images/img9.jpg" alt="img">
+            <div>
+              <br>
+              <h4>Technology / march 26, 2020</h4>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
+                tempora!</p>
+            </div>
+          </a>
+        </div>
+        <div class="news3">
+          <a href="#">
+            <img src="images/img.jpg" alt="img">
+            <div>
+              <br>
+              <h4>Technology / march 26, 2020</h4>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
+                tempora!</p>
+            </div>
+          </a>
+        </div>
+        <div class="news4">
+          <a href="#">
+            <img src="images/img4.jpg" alt="img">
+            <div>
+              <br>
+              <h4>Technology / march 26, 2020</h4>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
+                tempora!</p>
+            </div>
+          </a>
+        </div>
+        <div class="news5">
+          <a href="#">
+            <img src="images/img2.jpg" alt="img">
+            <div>
+              <br>
+              <h4>Technology / march 26, 2020</h4>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
+                tempora!</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+      </div>
+      </div>
+    </section>
+  </header>
+
+
+
+
+  <section class="featured">
+    <div class="container">
+      <div class="row para">
+        <h1>featured news</h1>
+      </div>
+      <div class="main-carousel"
+        data-flickity='{ "cellAlign": "left", "contain": true, "freeScroll": true, "autoPlay":true}'>
+        <div class="carousel-cell">
+          <img src="./images/img3.jpg" alt="image">
+          <h3>Lorem ipsum: xlur dolor sit amet. Lorem, ipsum.</h3>
+
+        </div>
+        <div class="carousel-cell">
+          <img src="images/img6.jpg" alt="image">
+          <h3>Lorem ipsum: xlur dolor sit amet. Lorem, ipsum.</h3>
+
+        </div>
+        <div class="carousel-cell">
+          <img src="images/img4.jpg" alt="image">
+          <h3>Lorem ipsum: xlur dolor sit amet. Lorem, ipsum.</h3>
+
+        </div>
+        <div class="carousel-cell">
+          <img src="./images/img7.jpg" alt="drgaPuja">
+          <h3>Lorem ipsum: xlur dolor sit amet. Lorem, ipsum.</h3>
+
+        </div>
+        <div class="carousel-cell">
+          <img src="images/img5.jpg" alt="image">
+          <h3>Lorem ipsum: xlur dolor sit amet. Lorem, ipsum.</h3>
+
+        </div>
+        <div class="carousel-cell">
+          <img src="images/img2.jpg" alt="image">
+          <h3>Lorem ipsum: dolor sit amet. Lorem, ipsum.</h3>
+
+        </div>
+        <div class="carousel-cell">
+          <img src="./images/img3.jpg" alt="drgaPuja">
+          <h3>Lorem ipsum: dolor sit amet. Lorem, ipsum.</h3>
+
+        </div>
+        <div class="carousel-cell">
+          <img src="images/img5.jpg" alt="image">
+          <h3>Lorem ipsum: dolor sit amet. Lorem, ipsum.</h3>
+
+        </div>
+        <div class="carousel-cell">
+          <img src="images/img8.jpg" alt="image">
+          <h3>Lorem ipsum: dolor sit amet. Lorem, ipsum.</h3>
+
+        </div>
+
+  </section>
+
+
+
+
+
+
+  <section class="main">
+    <div class="trending">
+      <h1>Trending</h1>
+      <div>
+        <div>
+          <img src="images/img.jpg">
+          <div>Trending / march 26, 2020</div>
+          <br>
+          <h2>Lorem ipsum: dolor sit amet consectetur adipisicing.</h2>
+          <br>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis voluptates qui atque expedita
+            officia, quaerat voluptatem? Quod, in obcaecati.</p>
+        </div>
+
+
+        <div><img src="images/img6.jpg">
+          <div>Trending / march 26, 2020</div>
+          <br>
+          <h2>Lorem ipsum: dolor sit amet consectetur adipisicing.</h2>
+          <br>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis voluptates qui atque expedita
+            officia, quaerat voluptatem? Quod, in obcaecati.</p>
+        </div>
+      </div>
+
+      <div class="more">See more</div>
+    </div>
+    <div class="right_part">
+      <div class="follow_us">
+        <h1>follow_us</h1>
+        <br>
+        <div>
+          <div class="social-facebook"><img src="./icons/facebook.svg" height="20px">
+            <div>51564
+              <p>fans</p>
+            </div>
+          </div>
+          <div class="social-instagram"><img src="./icons/instagram.svg" height="20px">
+            <div>51564
+              <p>followers</p>
+            </div>
+          </div>
+          <div class="social-youtube"><img src="./icons/youtube.svg" height="20px">
+            <div>51564
+              <p>subscribers</p>
+            </div>
+          </div>
+          <div class="social-twitter"><img src="./icons/twitter.svg " height="20px">
+            <div>51564
+              <p>followers</p>
+            </div>
+          </div>
+          <div class="social-medium"><img src="./icons/medium.svg" height="20px">
+            <div>51564
+              <p>followers</p>
+            </div>
+          </div>
+          <div class="social-discord"><img src="./icons/discord.svg" height="20px">
+            <div>51564
+              <p>members</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="most_view">
+        <h1>most_view</h1>
+        <br>
+        <div>
+          <a href="#">
+            <img src="images/img4.jpg" alt="img">
+            <div>
+              <h4>technology / may 24, 2021</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, commodi!</p>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="images/img7.jpg" alt="img">
+            <div>
+              <h4>technology / may 24, 2021</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, commodi!</p>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="images/img8.jpg" alt="img">
+            <div>
+              <h4>technology / may 24, 2021</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, commodi!</p>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="images/img3.jpg" alt="img">
+            <div>
+              <h4>technology / may 24, 2021</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, commodi!</p>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="images/img6.jpg" alt="img">
+            <div>
+              <h4>technology / may 24, 2021</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, commodi!</p>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="images/img6.jpg" alt="img">
+            <div>
+              <h4>technology / may 24, 2021</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, commodi!</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="more_news">
+      <h1 style="width:100%">more_news</h1>
+
+      <div>
+        <a href="#">
+          <img src="images/img5.jpg" alt="img">
+          <div>
+            <h4>technology / may 24, 2021</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, quis!</p>
+          </div>
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="images/img6.jpg" alt="img">
+          <div>
+            <h4>technology / may 24, 2021</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, quis!</p>
+          </div>
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="images/img2.jpg" alt="img">
+          <div>
+            <h4>technology / may 24, 2021</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, quis!</p>
+          </div>
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="images/img4.jpg" alt="img">
+          <div>
+            <h4>technology / may 24, 2021</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, quis!</p>
+          </div>
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="images/img9.jpg" alt="img">
+          <div>
+            <h4>technology / may 24, 2021</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, quis!</p>
+          </div>
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="images/img7.jpg" alt="img">
+          <div>
+            <h4>technology / may 24, 2021</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, quis!</p>
+          </div>
+        </a>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+
+  <section class="quest">
+    <h1>daily quest</h1>
+
+    <div class="main-carousel"
+      data-flickity='{ "cellAlign": "left", "contain": true, "freeScroll": true, "autoPlay":true}'>
+      <div class="carousel-cell">
+        <img src="./images/img5.jpg" alt="drgaPuja">
+        <h3>Lorem ipsum: xlur dolor sit amet. Lorem, ipsum.</h3>
+      </div>
+      <div class="carousel-cell">
+        <img src="images/img4.jpg" alt="image">
+        <h3>Lorem ipsum: xlur dolor sit amet. Lorem, ipsum.</h3>
+      </div>
+      <div class="carousel-cell">
+        <img src="images/img3.jpg" alt="image">
+        <h3>Lorem ipsum: xlur dolor sit amet. Lorem, ipsum.</h3>
+      </div>
+      <div class="carousel-cell">
+        <img src="./images/img5.jpg" alt="drgaPuja">
+        <h3>Lorem ipsum: xlur dolor sit amet. Lorem, ipsum.</h3>
+      </div>
+      <div class="carousel-cell">
+        <img src="images/img.jpg" alt="image">
+        <h3>Lorem ipsum: xlur dolor sit amet. Lorem, ipsum.</h3>
+      </div>
+      <div class="carousel-cell">
+        <img src="images/img4.jpg" alt="image">
+        <h3>Lorem ipsum: xlur dolor sit amet. Lorem, ipsum.</h3>
+      </div>
+      <div class="carousel-cell">
+        <img src="./images/img5.jpg" alt="drgaPuja">
+        <h3>Lorem ipsum: xlur dolor sit amet. Lorem, ipsum.</h3>
+      </div>
+      <div class="carousel-cell">
+        <img src="images/img4.jpg" alt="image">
+        <h3>Lorem ipsum: xlur dolor sit amet. Lorem, ipsum.</h3>
+      </div>
+      <div class="carousel-cell">
+        <img src="images/img.jpg" alt="image">
+        <h3>Lorem ipsum: xlur dolor sit amet. Lorem, ipsum.</h3>
+      </div>
+  </section>
+
+
+  <div class="decoration">
+    <div class="background-style"
+      style="background-color: rgb(26, 30, 43); height: 60ch; width: 100%; position: absolute; z-index: -2; top:290ch">
+    </div>
+    <div
+      style="background-color: rgb(255, 255, 255); height: 25ch; width: 94%; margin: 0 3%;  position: absolute; z-index: -1; top: 289.3ch">
+    </div>
+    <div
+      style="background-color: rgb(255, 255, 255); height: 50ch; width: 94%; margin: 0 3%;  position: absolute; z-index: -1; top:322.2ch">
+    </div>
+  </div>
+
+
+  <section class="popular">
+
+    <div class="video">
+      <h1 style="margin-bottom: 1ch;">video news</h1>
+      <div style="width:100%;">
+        <div class="video_news" style="width:fit-content; margin: auto;">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/UXQ_2tzAPVU"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="details">
+          <div> Enterteinment / March 26, 2020</div>
+          <br>
+          <h3>How does Ryan Tedder smell? (OneRepublic @ TODAY show)</h3>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="popular_news">
+
+      <h1>popular news</h1>
+      <br>
+      <div><img src="images/img5.jpg" alt="img">
+        <div>
+          <h4>technology / may 24, 2021</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, quis!</p>
+        </div>
+      </div>
+
+      <div><img src="images/img7.jpg" alt="img">
+        <div>
+          <h4>technology / may 24, 2021</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, quis!</p>
+        </div>
+      </div>
+
+      <div><img src="images/img3.jpg" alt="img">
+        <div>
+          <h4>technology / may 24, 2021</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, quis!</p>
+        </div>
+      </div>
+
+      <div><img src="images/img4.jpg" alt="img">
+        <div>
+          <h4>technology / may 24, 2021</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, quis!</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <SECTION class="optional">
+
+
+    <section class="catagory">
+
+      <div class="enterteinment">
+        <h1>entertainment</h1>
+
+        <div>
+          <div>
+            <img src="images/img6.jpg">
+            <div>Enterteinment / march 26, 2020</div>
+            <h2>Lorem ipsum: dolor sit amet consectetur adipisicing.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis voluptates qui atque expedita
+              officia, quaerat voluptatem? Quod, in obcaecati.</p>
+          </div>
+
+          <div>
+            <img src="images/img5.jpg">
+            <div>Enterteinment / march 26, 2020</div>
+            <h2>Lorem ipsum: dolor sit amet consectetur adipisicing.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis voluptates qui atque expedita
+              officia, quaerat voluptatem? Quod, in obcaecati.</p>
+          </div>
+
+          <div>
+            <img src="images/img.jpg">
+            <div>Enterteinment / march 26, 2020</div>
+            <h2>Lorem ipsum: dolor sit amet consectetur adipisicing.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis voluptates qui atque expedita
+              officia, quaerat voluptatem? Quod, in obcaecati.</p>
+          </div>
+
+          <div>
+            <img src="images/img3.jpg">
+            <div>Enterteinment / march 26, 2020</div>
+            <h2>Lorem ipsum: dolor sit amet consectetur adipisicing.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis voluptates qui atque expedita
+              officia, quaerat voluptatem? Quod, in obcaecati.</p>
+          </div>
+
+        </div>
+
+
+        <div class="sports">
+          <div class="cover">
+            <h1 style="font-size: 2.5ch; position: relative; bottom: 8px;">Sports</h1>
+            <div>
+              <img src="images/img9.jpg">
+              <div>sports / march 26, 2020</div>
+              <h2>Lorem ipsum: dolor sit amet consectetur adipisicing.</h2>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis voluptates qui atque
+                expedita
+                officia, quaerat voluptatem? Quod, in obcaecati.</p>
+            </div>
+
+
+          </div>
+
+          <div class="more">
+            <div><img src="images/img3.jpg" alt="img">
+              <div>
+                <h4>sports / 21 june, 2021</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, commodi.</p>
+              </div>
+            </div>
+            <div><img src="images/img3.jpg" alt="img">
+              <div>
+                <h4>sports / 21 june, 2021</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, commodi.</p>
+              </div>
+            </div>
+            <div><img src="images/img3.jpg" alt="img">
+              <div>
+                <h4>sports / 21 june, 2021</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, commodi.</p>
+              </div>
+            </div>
+            <div><img src="images/img3.jpg" alt="img">
+              <div>
+                <h4>sports / 21 june, 2021</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, commodi.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="bussiness">
+          <h1 style="font-size: 3ch;">Business</h1>
+
+          <div>
+
+            <div>
+              <img src="./images/img2.jpg">
+              <div>
+                <div>Business / march 26, 2020</div>
+                <br>
+                <h2>Lorem ipsum: dolor sit amet consectetur adipisicing.</h2>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis voluptates qui atque
+                  expedita
+                  officia, quaerat voluptatem? Quod, in obcaecati.</p>
+              </div>
+            </div>
+
+
+            <div>
+              <img src="./images/img6.jpg">
+              <div>
+                <div>Business / march 26, 2020</div>
+                <br>
+                <h2>Lorem ipsum: dolor sit amet consectetur adipisicing.</h2>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis voluptates qui atque
+                  expedita
+                  officia, quaerat voluptatem? Quod, in obcaecati.</p>
+              </div>
+            </div>
+
+
+
+            <div>
+              <img src="./images/img4.jpg">
+              <div>
+                <div>Business / march 26, 2020</div>
+                <br>
+                <h2>Lorem ipsum: dolor sit amet consectetur adipisicing.</h2>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis voluptates qui atque
+                  expedita
+                  officia, quaerat voluptatem? Quod, in obcaecati.</p>
+              </div>
+            </div>
+
+
+
+            <div class="bussiness_news">
+              <img src="./images/img5.jpg">
+              <div>
+                <div>Business / march 26, 2020</div>
+                <br>
+                <h2>Lorem ipsum: dolor sit amet consectetur adipisicing.</h2>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis voluptates qui atque
+                  expedita
+                  officia, quaerat voluptatem? Quod, in obcaecati.</p>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section class="other">
+      <div class="COVID" style="background-color: rgb(223, 255, 252);">
+        <div class="heading">COVID status in last 24 hrs </div>
+
+        <div style="width:40%; background-color: rgb(104, 144, 252);">
+          Infected:
+          <div>2121</div>
+        </div>
+
+        <div style="width:40%; background-color: rgb(88, 241, 88);">
+          Recovered:
+          <div>2009</div>
+        </div>
+
+        <div style="width:40%; background-color: rgb(245, 163, 125);">
+          Death:
+          <div>6</div>
+        </div>
+
+        <div style="font-size: larger; color: rgb(241, 32, 248); font-weight: 800;"><a href="#">Help line in your
+            area</a></div>
+
+        <div class="graph" style="height:35ch; background-color:rgb(252, 244, 208)">
+
+        </div>
+
+      </div>
+
+      <br>
+
+      <div class="health">
+        <h2>health</h2>
+        <br>
+        <div><img src="images/img9.jpg" alt="img">
+          <div>
+            <h4>health / 20 june, 2021</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, laborum!</p>
+          </div>
+        </div>
+        <div><img src="images/img4.jpg" alt="img">
+          <div>
+            <h4>health / 20 june, 2021</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, laborum!</p>
+          </div>
+        </div>
+        <div><img src="images/img6.jpg" alt="img">
+          <div>
+            <h4>health / 20 june, 2021</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, laborum!</p>
+          </div>
+        </div>
+        <div><img src="images/img3.jpg" alt="img">
+          <div>
+            <h4>health / 20 june, 2021</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, laborum!</p>
+          </div>
+        </div>
+        <div><img src="images/img2.jpg" alt="img">
+          <div>
+            <h4>health / 20 june, 2021</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, laborum!</p>
+          </div>
+        </div>
+        <div><img src="images/img7.jpg" alt="img">
+          <div>
+            <h4>health / 20 june, 2021</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, laborum!</p>
+          </div>
+        </div>
+        <div><img src="images/img8.jpg" alt="img">
+          <div>
+            <h4>health / 20 june, 2021</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, laborum!</p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="newsletter">
+        <h2>NEWSLETTER</h2>
+        <br>
+        <p>Your email address will not be this published. Required fields are News Today.</p>
+        <br>
+        <input type="text" placeholder="ENter email"><button>SIGNUP</button>
+        <br><br>
+        <p>signup to get yur daily quest</p>
+      </div>
+
+      <div class="catagories">
+        <div class="science">Science</div>
+        <div class="politics">Politics</div>
+        <div class="entertainment">Entertainment</div>
+        <div class="bussiness">Bussiness</div>
+        <div class="health">health</div>
+        <div class="sport">sports</div>
+      </div>
+
+      <ad style="background-color: slategray; height: 30ch;">
+        <img src="./banner2.jpg" height="270px" width="100%" alt="AD">
+      </ad>
+
+    </section>
+
+
+  </SECTION>
+
+
+  <br>
+
+  <footer>
+    <div class="logo">
+      <h1>Newspark</h1>
+      <br>
+      <a class="icn" href="#"><i class="fab fa-twitter "></i></a>
+      <a class="icn" href="#"><i class="fab fa-facebook "></i></a>
+      <a class="icn" href="#"><i class="fab fa-youtube "></i></a>
+      <a class="icn" href="#"><i class="fab fa-instagram "></i></a>
+    </div>
+    <br><br>
+    <div class="signup_option">
+      <input type="text" placeholder="ENter email"><button>SIGNUP</button>
+    </div>
+    <br><br>
+    <div class="all_catagories">
+      <div>
+        <h3 style="line-height: 3.5ch;">catagories</h3>
+        <ul>
+          <li><a href="#">Politics </a></li>
+          <li><a href="#">Business </a></li>
+          <li><a href="#">TECHNOLOGY </a></li>
+          <li><a href="#">Science </a></li>
+          <li><a href="#">Health </a></li>
+          <li><a href="#">Sports </a></li>
+          <li><a href="#">Entertainment</a></li>
+          <li><a href="#">Education </a></li>
+          <li><a href="#">Obituaries </a></li>
+          <li><a href="#">Corrections </a></li>
+          <li><a href="#">Education </a></li>
+          <li><a href="#">Today’s Paper</a></li>
+          <li><a href="#">Corrections </a></li>
+          <li><a href="#">Foods </a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 style="line-height: 3.5ch;">Opinion</h3>
+        <ul>
+          <li><a href="#">Today’s Opinion </a></li>
+          <li><a href="#">Op-Ed Contributing </a></li>
+          <li><a href="#">Contributing Writers</a></li>
+          <li><a href="#">Business News </a></li>
+          <li><a href="#">Collections </a></li>
+          <li><a href="#">Today’s Paper </a></li>
+          <li><a href="#">Saturday Review </a></li>
+          <li><a href="#">Product Review </a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="line-height: 3.5ch;">Newspark Services</h3>
+
+        <ul>
+          <li><a href="#">On your mobile</a></li>
+          <li><a href="#">On smart speaker</a></li>
+          <li><a href="#">Contact Newspark</a></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+    </div>
+  </footer>
+
+
+
+  <script>
+
+    // For calender update
+    var d = new Date();
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var today = `${days[d.getDay()]}, ${months[d.getMonth()]}  ${d.getDate()} ${d.getFullYear()}`
+    document.getElementById("today").innerHTML = today;
+
+
+    //navigation menu
+    function dropNav() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+
+
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function () { scrollEffect() };
+
+    function scrollEffect() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+
+  </script>
+
+</body>
+
+</html>

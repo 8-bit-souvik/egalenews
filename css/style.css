@@ -1,0 +1,1141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition-duration: .3s;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(158, 158, 158); 
+  border-radius: 60px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.scroll-indicator {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.progress-container {
+  width: 100%;
+  height: 5px;
+  background: #e9e9e9;
+}
+
+.progress-bar {
+  height: 5px;
+  background: #4c7a87;
+  width: 0%;
+  border-radius: 0 40ch 40ch 0;
+  transition-duration: 0s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+  font-weight:500;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.head{
+  background-color: rgb(255, 223, 223);
+   height: 5ch;
+}
+
+.head > div > .trending{
+  background-color: red;
+   color: white;
+   width: fit-content;
+   padding: 10px;
+}
+
+.head > div > .extend{
+  position: absolute;
+   right: 10%;
+   padding-top: 10px;
+}
+
+header {
+    margin: 2ch 5% 0 5%;
+}
+
+.icn {
+    padding-left: 5px;
+}
+
+.header{
+    display:grid;
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: 5fr 3fr;
+    padding: 10px;
+   
+}
+
+h2{
+  font-size: 2.5ch;
+}
+
+.brand{
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.brand > span:nth-child(1){
+  display: grid;
+  font-size: 6ch;
+  align-self: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+}
+#ad img {
+  width: 100%;
+  height: 90px;
+}
+
+.weather{
+  display:inline-flex;
+   margin-top: 10px;
+    cursor: pointer;
+}
+
+.weather > img {
+  padding-right: 15px;
+   margin-top: 15px;
+}
+
+.weather >div> div:first-child{
+  font-size: 2.4ch;
+   font-weight: 700;
+}
+
+.weather >div> div:nth-child(2){
+  font-weight: 500;
+   font-size: 2ch;
+   color: rgb(125, 136, 170);
+}
+
+.slideshow-container {
+    margin: auto;
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: #ffffff;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  .fade > img{
+    width: 90%; height: 350px;
+
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+
+.featured{
+ 
+  margin: 5%;
+  background-color: rgb(255, 255, 255);
+  height: 40ch;
+  
+
+}
+
+
+
+
+
+
+
+.main{
+display: grid;
+grid-template-columns: 2fr 1fr;
+justify-content: stretch;
+margin: 5%;
+grid-template-rows:6fr 5fr 
+}
+
+.trending{
+  background-color: rgb(255, 255, 255);
+
+}
+
+.trending > div{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.trending > div > div{
+  padding: 2ch;
+  width: 41ch;
+  margin: auto;
+  box-shadow: rgb(235, 235, 235) 0 0 20px 1px;
+  cursor: pointer;
+}
+
+.trending > div > div > p{
+  color: rgb(100, 100, 100);
+}
+
+.trending > .more{
+  width: fit-content;
+  margin-top: 2ch;
+  padding: 1ch;
+  font-size: 2ch;
+  font-weight: 700;
+  border: rgb(153, 153, 153) 2px solid;
+  position: relative;
+  left: 2ch;
+  bottom: 1ch;
+ 
+}
+
+.trending > .more:hover{
+  cursor: pointer;
+  background-color: rgb(185, 185, 185);
+
+}
+
+.follow_us{
+background-color: rgb(255, 255, 255);
+user-select: none;
+}
+
+.follow_us > div{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.follow_us > div > div {
+  display: flex;
+margin: auto;
+margin-top: 15px;
+
+align-items: center;
+height: 6ch;
+width: 12ch;
+padding: .6ch;
+cursor: pointer;
+}
+
+.follow_us > div > .social-facebook{
+  background-color: rgb(64, 74, 185);
+}
+.follow_us > div > .social-instagram{
+  background-color: rgb(184, 83, 224);
+}
+.follow_us > div > .social-youtube{
+  background-color: rgb(235, 48, 48);
+}
+.follow_us > div > .social-twitter{
+  background-color: rgb(60, 198, 240);
+}
+.follow_us > div > .social-medium{
+  background-color: rgb(8, 211, 8);
+}
+.follow_us > div > .social-discord{
+  background-color: rgb(98, 100, 124);
+}
+
+.follow_us > div > div > div{
+  line-height: 2ch;
+  margin: auto;
+  font-size: 1.4ch;
+  font-weight: 700;
+  color: white;
+}
+
+
+
+.more_news{
+  background-color: rgb(255, 255, 255);
+}
+.right_part{
+  display: grid;
+ grid-column: 2/4;
+ grid-row: 1/3;
+ grid-template-rows:3fr 9fr ;
+}
+
+.quest{
+  margin: 5%;
+  background-color: rgb(255, 255, 255);
+}
+
+.popular{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+
+  background-color: rgb(255, 255, 255);
+  margin: 5%;
+}
+
+.popular_news{
+  background-color: rgb(255, 255, 255);
+}
+
+.popular_news > div{
+  min-height: 12ch;
+  margin-bottom: 1ch;
+  background-color: rgb(255, 255, 255);
+  padding-top: 3%;
+  box-shadow: rgb(223, 223, 223) 0 0 10px 1px;
+ cursor: pointer;
+}
+
+.popular_news > div > img {
+  float: left;
+  height: 9ch;
+  width: 12ch;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.popular_news > div > div > h4{
+       margin-bottom: 5px;
+       font-size: smaller;
+}
+
+.popular_news > div > div > p{
+  color: #505050;
+  line-height: 20px;
+}
+
+.optional {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 5%;
+}
+
+.catagory{
+  display: grid;
+
+  grid-auto-rows: minmax(200px, auto)
+}
+
+.sports{
+  display: grid;
+  border-bottom: rgb(226, 226, 226) solid 1px;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
+
+.other{
+  display: grid;
+
+}
+
+footer{
+  color: aliceblue;
+  background-color: rgb(41, 53, 63);
+  padding: 5%;
+  flex-wrap: wrap;
+}
+
+footer  .icn{
+  padding: 2ch;
+  color: #f2f2f2;
+  background-color: rgba(240, 248, 255, 0.027);
+  margin-right: 5px;
+}
+  
+footer  .icn:hover{
+  background-color: rgba(0, 120, 224, 0.877);
+}
+
+footer .signup_option{
+display: flex;
+justify-content:flex-end;
+}
+
+
+.headlines{
+  background-color: rgba(255, 255, 255);
+  padding: 10px;
+  font-size: 14px;
+}
+
+
+.headlines > div{
+     min-height: 14ch;
+     margin-bottom: 1ch;
+     background-color: rgb(255, 255, 255);
+     box-shadow: rgb(202, 202, 202) 0px 0px 15px 2px;
+     cursor: pointer;
+}
+
+.headlines > div > a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+
+.headlines > div > a > div{
+  display: flex;
+justify-content: center;
+  flex-direction: column;
+}
+
+.headlines > div > a > div > p{
+  margin-top: 1ch;
+}
+
+.headlines > div > a > img {
+  float: left;
+  height: 10ch;
+  width: 12ch;
+  margin-top: 2ch;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+.most_view{
+  background-color: rgba(255, 255, 255);
+  padding: 10px;
+  height: 81ch;
+}
+
+.most_view > div{
+  min-height: 11.4ch;
+  margin-bottom: 1ch;
+  background-color: rgb(255, 255, 255);
+
+  box-shadow: rgb(221, 221, 221) 0 0 15px 1px;
+  cursor: pointer;
+}
+.most_view > div> a{
+  text-decoration: none;
+}
+.most_view > div > a > div > h4{
+  font-size: 1.5ch;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.most_view > div > a > div > p{
+  margin-top: 1ch;
+  font-size: 1.6ch;
+  line-height: 1.9ch;
+  color: rgb(95, 95, 95);
+}
+.most_view > div> a > img {
+  float: left;
+  height: 9ch;
+  width: 10ch;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.more_news{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.more_news > div{
+  min-height: 13ch;
+  min-width: 300px;
+  width: 50%;
+  margin-bottom: 1ch;
+  background-color: rgb(255, 255, 255);
+
+  box-shadow: rgb(221, 221, 221) -5px 0 10px;
+  cursor: pointer;
+}
+
+.more_news> div> a > img {
+  float: left;
+  height: 9ch;
+  width: 10ch;
+  margin-left: 8px;
+  margin-right: 5px;
+  margin-top : 15px;
+}
+
+.more_news> div > a{
+  text-decoration: none;
+}
+
+.more_news> div > a > div>{
+  display: flexbox;
+  align-self: center;
+  align-content: center;
+}
+
+.more_news> div > a > div> h4 {
+  margin-bottom: 6px;
+  font-size: 12.5px;
+}
+
+.more_news> div > a > div> p{
+  font-size: 1em;
+  line-height: 1.9ch;
+  font-weight: 400;
+  color: #464646;
+}
+
+.video{
+  background-color: rgb(223, 223, 223);
+}
+.video_news iframe{
+  width: 670px;
+   height: 315px;
+}
+
+.video  .details{
+  width: 95%;
+  margin: auto;
+
+}
+
+.enterteinment > div{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.enterteinment > div > div{
+  padding: 2ch;
+  width: 41ch;
+  margin: auto;
+  cursor: pointer;
+}
+
+.enterteinment > div > div >p{
+  margin-top: 1ch;
+  color: #5f5f5f;
+}
+
+.enterteinment > div > div > img{
+  height: 25ch;
+  width: 35ch;
+ margin: auto;
+}
+
+.sports > .cover{
+  padding: 2ch;
+  width: 41ch;
+  margin: auto;
+} 
+
+.sports > .cover > div > img{
+  height: 30ch;
+  width: 35ch;
+ margin: auto;
+}
+
+.sports > .cover > div > p{
+  margin-top: 1ch;
+  color: #5f5f5f;
+}
+
+.sports > .more > div{
+  height: 12ch;
+  margin-bottom: 1ch;
+  background-color: rgb(255, 255, 255);
+  padding-top: 3%;
+  box-shadow: rgb(218, 218, 218) 0 0 15px 1px;
+}
+
+.sports > .more > div > img {
+  float: left;
+  height: 9ch;
+  width: 12ch;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.sports > .more > div > div > h4{
+  margin-bottom: 5px;
+  font-size: 12.5px;
+}
+
+.sports > .more > div > div > p{
+  color: rgb(73, 73, 73);
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.bussiness > div{
+  width: 100% !important;
+  cursor:context-menu !important;
+}
+
+
+
+
+.bussiness > div >div img {
+  height: 30ch;
+  width: 40ch;
+ margin: auto;
+}
+.bussiness > div > div{
+  margin:20px;
+  display: inline-flex;
+  box-shadow: rgb(241, 241, 241) 0 0 30px 1px;
+  cursor:pointer;
+}
+
+.bussiness > div > div > div{
+  display: grid;
+  align-items: center;
+  margin: auto 0px auto 3ch;
+}
+
+.bussiness > div > div > div> p{
+  color: #5f5f5f;
+}
+
+.catagories{
+  display: grid;
+  align-items: center;
+}
+
+.catagories > div{
+        width: 80%;
+        height: 5ch;
+        background-color: #2d303f;
+        color: #f2f2f2;
+        margin: auto;
+        text-align: center;
+        font-size: 3ch;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 4ch;
+        cursor: pointer;
+        margin: 4px auto;
+      }
+
+ .catagories > div:hover{
+        transform: scale(1.05);
+      }
+
+ .COVID{
+
+ height:fit-content ;
+        margin: 0;
+      }
+
+.COVID > .heading{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3ch;
+  text-align: center;
+  line-height: 4ch;
+background-color: #ffffffbb;
+width: 100%;
+height: fit-content;
+}
+
+.COVID > div {
+  height: 6ch;
+  text-align: center;
+  margin: 5px;
+  
+}
+
+.health{
+  border-left: rgb(228, 228, 228) solid 2px;
+  padding-left: 10px;
+}
+
+.health > div{
+  min-height: 12ch;
+  margin-bottom: 1ch;
+  background-color: rgb(255, 255, 255);
+  padding-top: 3%;
+  width: 40ch;
+  box-shadow: rgb(219, 219, 219) 0 0 10px 1px;
+  cursor: pointer;
+}
+
+.health > div > img {
+  float: left;
+  height: 9ch;
+  width: 12ch;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.health > div > div > h4{
+  font-size: 12px;
+  margin-bottom: 5px;
+
+}
+
+.health > div > div > p{
+  font-size: 14px;
+  line-height: 17px;
+  color: rgb(82, 82, 82);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.newsletter{
+ 
+  background-color: #cacaca;
+  padding: 4ch;
+  margin: 2ch;
+}
+
+.newsletter > p{
+  font-size: 2.2ch;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.newsletter > input{
+   height: 6ch;
+   width: 25ch;
+   text-align: center;
+   outline: none;
+}
+
+.newsletter > button{
+  height: 6ch;
+  width:9ch;
+  cursor: pointer;
+  background-color: rgb(63, 104, 167);
+  color: #f0f7ff;
+  font-weight: bolder;
+  outline: none;
+}
+
+footer > .signup_option{
+  width: fit-content;
+  height: 6ch;
+  border: rgb(204, 153, 58) solid 2px;
+  position: absolute;
+  right: 10ch;
+}
+footer > .signup_option > input{
+  width: 25ch;
+  outline: none;
+  border: none;
+  text-align: center ;
+}
+footer > .signup_option > button{
+  width:10ch;
+  cursor: pointer;
+  background-color: rgb(82, 82, 82);
+  color: #f0f7ff;
+  font-weight: bolder;
+  outline: none;
+}
+
+footer > .all_catagories{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+footer > .all_catagories > div {
+  margin: auto;
+}
+
+footer > .all_catagories > div > ul > li  {
+  list-style-type:none;
+
+}
+
+footer > .all_catagories > div > ul > li > a{
+  text-decoration: none;
+  color: #cacaca;
+}
+
+
+
+
+
+
+
+.cover_image{
+  width: fit-content;
+}
+
+/* Hide the images by default */
+.mySlides {
+display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+cursor: pointer;
+}
+
+/* Next & previous buttons */
+.cover_image > .prev,
+.cover_image > .next {
+cursor: pointer;
+position: absolute;
+top: 85%;
+width: auto;
+padding: 16px;
+background-color: #424242be;
+color: rgb(255, 241, 110);
+font-weight: bold;
+font-size: 38px;
+border-radius: 0 3px 3px 0;
+user-select: none;
+-webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.cover_image > .next {
+position: absolute;
+left: 57%;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+height: 12ch;
+text-align: center;
+background-color: #222;
+padding: 5px 16px;
+color: white;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Six columns side by side */
+.column {
+float: left;
+width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+opacity: 1;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:1200px){
+  .background-style{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width:1200px) {
+  .video_news iframe{
+    width: 570px;
+    height: 315px;
+  }
+}
+
+
+@media screen and (max-width:1030px) {
+  .video_news iframe{
+    width: 500px;
+    height: 315px;
+  }
+  .more_news div{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .sports{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .optional{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+
+  }
+
+  header,
+  .featured,
+   .optional,
+    .popular,
+     .quest,
+      .main{
+      margin: 2%;
+  }
+
+  .bussiness > div > div{
+    margin:20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+  @media only screen and (max-width: 900px ){
+    #ad img {
+      width: 100%;
+      height: 80px;
+    }
+    .video_news iframe{
+      width: 470px;
+      height: 315px;
+    }
+  
+
+  
+
+  @media screen and (max-width: 875px) {
+    .main{
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      justify-content: stretch;
+  }
+  .video_news iframe{
+    width: 440px;
+    height: 315px;
+  }
+}
+  
+
+}
+@media only screen and (max-width: 800px ){
+#ad img {
+  width: 100%;
+  height: 70px;
+}
+.video_news iframe{
+  width: 400px;
+  height: 315px;
+}
+.popular{
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+}
+}
+
+@media only screen and (max-width: 800px ){
+  .video_news iframe{
+    width: 380px;
+    height: 315px;
+  }
+  .popular{
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+  }
+.head > div > .trending{
+    background-color: rgb(255, 223, 223);
+  }
+ .trending > h3{
+   display: none;
+ }
+
+}
+
+
+  @media only screen and (max-width: 700px ) {
+    .header{
+        grid-template-columns: 1fr;
+      
+    }
+
+    .fade > img{
+      width: 100%;
+    }
+
+    #ad img {
+      width: 95%;
+      height: 80px;
+    }
+    .optional{
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .main{
+      display: flex;
+      flex-direction: column;
+   }
+ 
+   .popular{
+     display: grid;
+     grid-template-columns: 1fr;
+   }
+
+   .cover_image > .next {
+    position: absolute;
+   left: 84%;
+    border-radius: 3px 0 0 3px;
+  }
+
+  }
+
+  @media only screen and (max-width: 650px ) {
+    .fade > img{
+      height: 300px;
+    }
+    
+    #ad img {
+      width: 100%;
+      height: 75px;
+    }
+ 
+.brand{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.brand > span:nth-child(odd){
+  justify-self: center;
+}
+*{
+  font-size: 98%;
+}
+footer{
+  font-size: 110%;
+}
+footer > .signup_option{
+  width: fit-content;
+  height: 6ch;
+  border: rgb(204, 153, 58) solid 2px;
+  position: inherit;
+  margin: auto;
+}
+}
+
+
+  @media screen and (max-width: 450px) {
+    .header{
+      padding: 1%;
+    }
+    .fade > img{
+      height: 250px;
+    }
+    .bussiness > div > div > img{
+      width: 300px;
+      height: 220px;
+    }
+
+    .video_news iframe{
+      width: 350px;
+      height: 315px;
+    }
+    .enterteinment > div > div > img,
+    .sports > .cover > div > img,
+    .bussiness > div > div > img{
+      width: 300px;
+      height: 190px;
+    }
+
+  }
+  @media screen and (max-width: 390px) {
+    .video_news iframe{
+      width: fit-content;
+      height: 315px;
+    }
+    .bussiness > div > div > img{
+      width: 270px;
+      height: 190px;
+    }
+  }
+
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {font-size: 11px}
+    }
+
+
