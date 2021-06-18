@@ -1,28 +1,6 @@
-var latitude  = null; 
+var latitude = null;
 var longitude = null;
 
-
-
-// to get location of browser  *************
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-function showPosition(position) {
-    console.log("lat: " + position.coords.latitude + "    lon: " + position.coords.longitude);
-
-
-
-   latitude  = position.coords.latitude ;
-   longitude = position.coords.longitude ;
-
-
-}
 
 
 
@@ -32,7 +10,6 @@ function showPosition(position) {
 var weather = {
 
     fetchWeather: function () {
-        
         console.log("p-3; s-1");
         console.log(latitude);
         console.log(longitude);
@@ -58,13 +35,66 @@ var weather = {
 
     fetchContent: (data) => {
 
+
     }
 }
 
 
 
 
-//   calling function ***************
 
-weather.fetchWeather();
-getLocation();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function weatherDisplay() {
+    let weatherData = new Promise(function getLocation() {
+        console.log("p-4; s-1");
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(showPosition);
+            console.log(navigator.geolocation.watchPosition(showPosition));
+    
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    },
+    
+    function showPosition(position) {
+        console.log("p-4; s-2");
+        console.log(position);
+        console.log("lat: " + position.coords.latitude + "    lon: " + position.coords.longitude);
+    
+    
+    
+        latitude = position.coords.latitude;
+        longitude = position.coords.longitude;
+    
+    
+    
+    });
+    weather.fetchWeather();
+}
+
+weatherDisplay();
