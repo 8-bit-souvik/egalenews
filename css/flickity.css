@@ -152,7 +152,7 @@
 
 .carousel-cell {
     width: 29%;
-    height: 50vh;
+    height: 20em;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -217,5 +217,5 @@
     .flickity-button {
         display: none;
     }
-
 }
+
