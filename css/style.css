@@ -799,6 +799,10 @@ footer > .signup_option > button{
   outline: none;
 }
 
+footer > .signup_option > button:hover{
+  background-color: rgb(75, 75, 75);
+}
+
 footer > .all_catagories{
   display: flex;
   flex-wrap: wrap;
